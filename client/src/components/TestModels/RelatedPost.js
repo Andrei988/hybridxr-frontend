@@ -16,7 +16,7 @@ const RelatedPost = ({title, image, id }) => {
     <div>
       <h4>{formatTitle(title)}</h4>
       <Link to={`/post/${id}`}>
-      <img src={`${dev_url_clean}${image}`} className="rounded-circle" alt="change it later"/>
+      <img src={`${dev_url_clean}${image}`}  alt="change it later"/>
       </Link>
     </div>
   );

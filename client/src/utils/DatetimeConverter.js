@@ -13,12 +13,10 @@ const convert = (timestamp) => {
     return minutes + " minutes ago";
   } else if (days !== 0 && hours === 0) {
     return days + " days ago";
-  } else if(hours === 0 && days === 0 && minutes < 5) {
-    return "a moment ago"
-  }
-  else {
-    hours = hours - (days - 1) * 24;
-    return days + " days " + hours + " hours ago";
+  } else if (hours === 0 && days === 0 && minutes < 5) {
+    return "a moment ago";
+  } else {
+    return days + " days and " + hours + " hours ago";
   }
 };
 

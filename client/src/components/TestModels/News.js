@@ -108,25 +108,6 @@ class News extends React.Component {
   render() {
     return (
       <div className="row" id="news">
-        {/* sidebar */}
-        {/* <div className="column col-sm-3" id="sidebar">
-          <a className="logo" href="/">
-            XR
-          </a>
-
-          <ul className="nav hidden-xs" id="sidebar-footer">
-            <li>
-              <div className="page-header text-muted divider">
-                Connect with Us
-              </div>
-              <a href="/">Twitter</a> <small className="text-muted">|</small>
-              <a href="/">Facebook</a> <small className="text-muted">|</small>
-              <a href="/">Google+</a>
-            </li>
-          </ul>
-        </div> */}
-        {/* /sidebar */}
-
         {/* main */}
         <div className="column col-sm-10" id="main">
           <div className="padding">

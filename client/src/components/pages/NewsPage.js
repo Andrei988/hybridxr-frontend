@@ -52,24 +52,10 @@ class NewsPage extends React.Component {
 
   renderNewsBox() {
     if (this.props.posts) {
-      var count = 0;
       return this.props.posts.map(
         ({ title, meta_info, timestamp, image, isRelated, id }) => {
-          count++;
           if (isRelated) {
             var img = image.substring(1); // removes a slash
-            var setting = "";
-
-            if (count % 4 === 1) {
-              setting += "pl-1 pt-0";
-            } else if (count % 4 === 2) {
-              setting += "pl-1 pt-0";
-            } else if (count % 4 === 3) {
-              setting += "pr-1 pt-1";
-            } else if (count % 4 === 0) {
-              setting += "pl-1 pt-1";
-            }
-            console.log(setting)
             return (
               <NewsBox
                 key={id}
@@ -78,7 +64,6 @@ class NewsPage extends React.Component {
                 timestamp={timestamp}
                 image={img}
                 id={id}
-                paddingSetting={setting}
               />
             );
           }
@@ -91,30 +76,21 @@ class NewsPage extends React.Component {
   render() {
     const { index } = this.state;
     return (
-      <div className="container">
-        <div class="row">
-          <div class="col-12 pb-5">
-            <section className="row" id="news-carousel">
-              <div class="col-12 col-md-6 pb-0 pb-md-3 pt-2 pr-md-1">
-                <Carousel
-                  indicators={false}
-                  autoPlay={true}
-                  interval={10000}
-                  activeindex={index}
-                  onSelect={this.handleSelect}
-                  className="carousel slide carousel"
-                >
-                  {this.renderCarouselItems()}
-                </Carousel>
-              </div>
-
-              <div className="col-12 col-md-6 pt-2 pl-md-1 mb-3 mb-lg-4">
-                <div className="row">{this.renderNewsBox()}</div>
-              </div>
-            </section>
+        <section className="row justify-content-around" id="news-carousel">
+          <Carousel
+            indicators={false}
+            autoPlay={true}
+            interval={10000}
+            activeindex={index}
+            onSelect={this.handleSelect}
+            className="carousel slide carousel"
+          >
+            {this.renderCarouselItems()}
+          </Carousel>
+          <div className="row d-flex justify-content-around">
+            {this.renderNewsBox()}
           </div>
-        </div>
-      </div>
+        </section>
     );
   }
 }

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import convert from "../../utils/DatetimeConverter";
 import formatTitle from "../../utils/FormatTitle";
 
-const NewsBox = ({ title, image, id, tag, timestamp, paddingSetting }) => {
+const NewsBox = ({ title, image, id, timestamp,  }) => {
   return (
-    <div className={`col-6 pl-1`} id ="related-container">
+    <div className="col-7 col-md-5  col-sm-6 col-lg-3 mb-3 " id ="related-container">
       <div className="card border-0 rounded-0 text-white overflow zoom">
         <div className="position-relative">
           {/*thumbnail img*/}
@@ -20,7 +20,7 @@ const NewsBox = ({ title, image, id, tag, timestamp, paddingSetting }) => {
           </div>
           <div className="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
             {/* category */}
-            <div className="p-1 badge badge-primary rounded-0">
+            <div className="p-1 badge badge-danger rounded-0">
               {convert(timestamp)} {/* add tag later */}
             </div>
             {/*title*/}
