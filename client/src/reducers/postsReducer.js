@@ -1,6 +1,6 @@
 import { GET_POSTS, GET_POST } from "../actions/types";
 
-export default (state = [], action) => {
+ const postsReducer = (state = [], action) => {
   switch (action.type) {
     case GET_POSTS:
       return action.payload;
@@ -10,3 +10,5 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+export default postsReducer;

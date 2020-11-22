@@ -272,7 +272,7 @@ h6 {
 
 .mobile-nav .drop-down > a:after {
   content: "\ea99";
-  font-family: IcoFont;
+  font-family: IcoFont !important;
   padding-left: 10px;
   position: absolute;
   right: 15px;
@@ -1325,11 +1325,9 @@ a {
 #post-detailed {
   margin-top: 100px;
 }
-section {
-  width: 100%;
-}
 .banner-section {
   background-size: cover;
+  width: 100%;
   height: 500px;
   left: 0;
   position: absolute;
@@ -1476,6 +1474,7 @@ small.text-muted {
 
 .carousel-inner {
   width: 1000px;
+  margin-top:6.9px;
 }
 
 

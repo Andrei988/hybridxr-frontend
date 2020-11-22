@@ -5,7 +5,6 @@ const convert = (timestamp) => {
   var days = Math.floor(t / 8.64e7);
   var hours = Math.floor((t % 8.64e7) / 3.6e6);
   var minutes = Math.floor((t % 3.6e6) / 6e4);
-  var seconds = Math.floor((t % 6e4) / 1e3);
 
   if (days === 0 && hours !== 0) {
     return hours + " hours " + minutes + " minutes ago";

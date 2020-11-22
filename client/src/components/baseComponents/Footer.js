@@ -13,10 +13,10 @@ const Footer = ({email, number, address, sn_title}) => {
                 Hybrid XR<span>.</span>
               </h3>
               <p>
-                {address[0]} <br />
+                {/* {address[0]} <br />
                 {address[1]} 
                 <br />
-                {address[2]}  <br />
+                {address[2]}  <br /> */}
                 <br />
                 <strong>Phone:</strong> {number}
                 <br />

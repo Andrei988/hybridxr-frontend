@@ -1,19 +1,13 @@
 import React from "react";
 import Icofont from "react-icofont";
 import { connect } from "react-redux";
-import { sendEmail, getCompanyInfo } from "../../actions";
+import { sendEmail } from "../../actions";
 import ContactForm from "../items/ContactForm";
 
 const placeId = "ChIJMa3_kL5jTEYRlf0kk7_eytA";
 const api_key = "AIzaSyClXtp3KWB6bqovTjxkUqKgZD2Ptvd2iTw";
 
 class ContactPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-  }
 
   sendEmail = (formValues) => {
     this.props.sendEmail(formValues);

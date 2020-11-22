@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceItem from '../items/ServiceItem'
+import ServiceItem from "../items/ServiceItem";
 
 const titles = ["Sed ut perspiciatis", "Nemo Enim", "Magni Dolores"];
 
@@ -9,11 +9,7 @@ const descriptions = [
   "Quis consequatur saepe eligendi voluptatem consequatur dolorconsequuntur",
 ];
 
-const icons = [
-    'dribbble',
-    'world',
-    'box'
-]
+const icons = ["dribbble", "world", "box"];
 
 const ServicesPage = (props) => {
   return (
@@ -27,10 +23,28 @@ const ServicesPage = (props) => {
             </h3>
             <p>{props.title}</p>
           </div>
-          <div className="row">
-            <ServiceItem title={titles[0]} description={descriptions[0]} icon={icons[0]}/>
-            <ServiceItem title={titles[1]} description={descriptions[1]} icon={icons[1]}/>
-            <ServiceItem title={titles[2]} description={descriptions[2]} icon={icons[2]}/>
+          <div className="row d-flex justify-content-around">
+            <div className="col-12 pt-2 col-sm-6 col-md-4 col-lg-4 ">
+              <ServiceItem
+                title={titles[0]}
+                description={descriptions[0]}
+                icon={icons[0]}
+              />
+            </div>
+            <div className="col-12 pt-2 col-sm-6 col-md-4 col-lg-4">
+              <ServiceItem
+                title={titles[1]}
+                description={descriptions[1]}
+                icon={icons[1]}
+              />
+            </div>
+            <div className="col-12 pt-2 col-sm-6 col-md-4 col-lg-4 ">
+              <ServiceItem
+                title={titles[2]}
+                description={descriptions[2]}
+                icon={icons[2]}
+              />
+            </div>
           </div>
         </div>
       </section>

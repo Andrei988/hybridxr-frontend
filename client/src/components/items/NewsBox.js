@@ -6,7 +6,7 @@ import formatTitle from "../../utils/FormatTitle";
 
 const NewsBox = ({ title, image, id, timestamp,  }) => {
   return (
-    <div className="col-7 col-md-5  col-sm-6 col-lg-3 mb-3 " id ="related-container">
+    <div className="col-12 col-md-6  col-sm-6 col-lg-6  mb-3 " id ="related-container">
       <div className="card border-0 rounded-0 text-white overflow zoom">
         <div className="position-relative">
           {/*thumbnail img*/}
@@ -14,7 +14,7 @@ const NewsBox = ({ title, image, id, timestamp,  }) => {
             <img
               src={`${dev_url_clean}${image}`}
               className="d-block w-100"
-              alt="new box image"
+              alt="news box"
               id="related-image"
             />
           </div>

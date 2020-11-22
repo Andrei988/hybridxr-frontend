@@ -1,5 +1,5 @@
 import api from "../apis/api";
-import { GET_POSTS, GET_POST, SEND_EMAIL, GET_COMPANY_INFO } from "./types";
+import { GET_POSTS, GET_POST, SEND_EMAIL } from "./types";
 
 export const getPosts = () => async (dispatch) => {
   const response = await api.get("post/list");
@@ -18,8 +18,4 @@ export const sendEmail = (formValues) => async (dispatch) => {
   dispatch({ type: SEND_EMAIL, payload: response.data });
 };
 
-export const getCompanyInfo = () => async (dispatch) => {
-  const response = await api.get("/info");
-  dispatch({ type: GET_COMPANY_INFO, payload: response.data });
-};
 

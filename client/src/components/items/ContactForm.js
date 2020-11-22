@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
     );
   };
 
-  onSubmit = (formValues) => {
+  onSubmit = (formValues) => {  
     this.props.onSubmit(formValues);
     this.setState({messageSent : true})
   };

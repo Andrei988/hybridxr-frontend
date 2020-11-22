@@ -76,7 +76,8 @@ class NewsPage extends React.Component {
   render() {
     const { index } = this.state;
     return (
-        <section className="row justify-content-around" id="news-carousel">
+      <section className="row d-flex justify-content-center" id="news-carousel">
+        <div className="col col-md-12 col-lg-6 col-sm-12 mt-4">
           <Carousel
             indicators={false}
             autoPlay={true}
@@ -87,10 +88,11 @@ class NewsPage extends React.Component {
           >
             {this.renderCarouselItems()}
           </Carousel>
-          <div className="row d-flex justify-content-around">
-            {this.renderNewsBox()}
-          </div>
-        </section>
+        </div>
+        <div className="col col-md-12 col-lg-6 col-xs-12">
+          <div className="row">{this.renderNewsBox()}</div>
+        </div>
+      </section>
     );
   }
 }

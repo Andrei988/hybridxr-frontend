@@ -3,8 +3,7 @@ import { dev_url_clean } from "../../apis/api";
 import { Link } from "react-router-dom";
 import convert from "../../utils/DatetimeConverter";
 
-const NewsItem = ({ title, meta_info, timestamp, image, id }) => {
-  // TODO: remove later unused props
+const NewsItem = ({ title, timestamp, image, id }) => {
   return (
     <div
       key={title}
@@ -17,7 +16,7 @@ const NewsItem = ({ title, meta_info, timestamp, image, id }) => {
             <img
               src={`${dev_url_clean}${image}`}
               className="d-block w-100 "
-              alt="carousel image"
+              alt="carousel"
               id="carousel-item-img"
             />
           </div>
