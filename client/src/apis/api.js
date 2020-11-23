@@ -6,7 +6,7 @@ export const prod_url = "http://snurfer98.pythonanywhere.com/api/";
 export const prod_url_clean = "http://snurfer98.pythonanywhere.com/";
 
 export default axios.create({ 
-  baseURL: dev_url,
+  baseURL: prod_url,
   headers: {
     // "Access-Control-Allow-Origin": "http://127.0.0.1:3000",
     "X-Requested-With": "XMLHttpRequest",
