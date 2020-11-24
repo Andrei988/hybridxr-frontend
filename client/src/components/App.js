@@ -16,6 +16,7 @@ import { runMobileNav } from "../jQuery/mobileNav";
 import api from "../apis/api";
 
 //test comment
+//test comment2
 
 class App extends React.Component {
   constructor(props) {
