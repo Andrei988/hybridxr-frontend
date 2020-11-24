@@ -15,6 +15,8 @@ import PostDetailed from "./items/PostDetailed";
 import { runMobileNav } from "../jQuery/mobileNav";
 import api from "../apis/api";
 
+//test comment
+
 class App extends React.Component {
   constructor(props) {
     super(props);
