@@ -14,7 +14,7 @@ const NewsItem = ({ title, timestamp, image, id }) => {
         <Link to={`/post/${id}`} className="text-muted">
           <div className="ratio_left-cover-1 image-wrapper">
             <img
-              src={`${dev_url_clean}${image}`}
+              src={`${prod_url_clean}${image}`}
               className="d-block w-100 "
               alt="carousel"
               id="carousel-item-img"
