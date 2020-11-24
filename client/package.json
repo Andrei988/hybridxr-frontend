@@ -11,6 +11,7 @@
     "axios-debug-log": "^0.8.2",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "mkcert": "^1.4.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
@@ -25,7 +26,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "SET HTTPS=true&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
