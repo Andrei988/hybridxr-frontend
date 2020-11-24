@@ -1,5 +1,5 @@
 import React from "react";
-import { dev_url_clean } from "../../apis/api";
+import { prod_url_clean } from "../../apis/api";
 import { Link } from "react-router-dom";
 import convert from "../../utils/DatetimeConverter";
 
