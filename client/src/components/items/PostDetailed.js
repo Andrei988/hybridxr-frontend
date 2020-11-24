@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getPost } from "../../actions";
-import { dev_url_clean } from "../../apis/api";
+import { prod_url_clean } from "../../apis/api";
 import convert from "../../utils/DatetimeConverter";
 
 class PostDetailed extends React.Component {
@@ -38,8 +38,8 @@ class PostDetailed extends React.Component {
     return (
       <div id="post-detailed">
         <section
-          class="banner-section"
-          style={{ backgroundImage: `url(${dev_url_clean}${img})` }}
+          className="banner-section"
+          style={{ backgroundImage: `url(${prod_url_clean}${img})` }}
         >
           <div
             className="col-lg-12 col-md-12 col-sm-12 post-title-block"

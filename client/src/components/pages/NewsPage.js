@@ -33,7 +33,7 @@ class NewsPage extends React.Component {
           var img = image.substring(1); // removes a slash
           if (!isRelated) {
             return (
-              <Carousel.Item key={id} indicators={false}>
+              <Carousel.Item key={id} indicators="false">
                 <NewsItem
                   id={id}
                   title={title}
@@ -79,7 +79,6 @@ class NewsPage extends React.Component {
       <section className="row d-flex justify-content-center" id="news-carousel">
         <div className="col col-md-12 col-lg-6 col-sm-12 mt-4">
           <Carousel
-            indicators={false}
             autoPlay={true}
             interval={10000}
             activeindex={index}

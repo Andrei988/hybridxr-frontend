@@ -1,18 +1,21 @@
 import React from "react";
-import { dev_url_clean } from "../../apis/api";
+import { prod_url_clean } from "../../apis/api";
 import { Link } from "react-router-dom";
 import convert from "../../utils/DatetimeConverter";
 import formatTitle from "../../utils/FormatTitle";
 
-const NewsBox = ({ title, image, id, timestamp,  }) => {
+const NewsBox = ({ title, image, id, timestamp }) => {
   return (
-    <div className="col-12 col-md-6  col-sm-6 col-lg-6  mb-3 " id ="related-container">
+    <div
+      className="col-12 col-md-6  col-sm-6 col-lg-6  mb-3 "
+      id="related-container"
+    >
       <div className="card border-0 rounded-0 text-white overflow zoom">
         <div className="position-relative">
           {/*thumbnail img*/}
           <div className="ratio_right-cover-2 image-wrapper">
             <img
-              src={`${dev_url_clean}${image}`}
+              src={`${prod_url_clean}${image}`}
               className="d-block w-100"
               alt="news box"
               id="related-image"
@@ -24,11 +27,9 @@ const NewsBox = ({ title, image, id, timestamp,  }) => {
               {convert(timestamp)} {/* add tag later */}
             </div>
             {/*title*/}
-            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-              <Link to={`/post/${id}`}>
-                <h2 className="h5 text-white my-1">"{formatTitle(title)}"</h2>
-              </Link>
-            </a>
+            <Link to={`/post/${id}`}>
+              <h2 className="h5 text-white my-1">"{formatTitle(title)}"</h2>
+            </Link>
           </div>
         </div>
       </div>

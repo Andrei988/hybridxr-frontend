@@ -55,11 +55,8 @@ class Navigation extends React.Component {
                 <span>.</span>
               </Link>
             </h1>
-            <Link to="/" className="logo mr-auto" />
             <nav className="nav-menu d-none d-lg-block">
-              <Link to="/" className="logo mr-auto" />
               <ul>
-                <Link to="/" className="logo mr-auto" />
                 <li onClick={() => this.setState({news:"active", home:"", services:"", portfolio:"", about:"", contact:""})} className={this.state.news}>
                   <Link to="/news">News</Link>
                 </li>

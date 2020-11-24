@@ -26,8 +26,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    runMobileNav();
     this.getInfo();
+  }
+
+  componentDidUpdate() {
+    runMobileNav();
   }
 
   getInfo = async () => {
@@ -42,10 +45,10 @@ class App extends React.Component {
     if (isLoading) {
       return <div>Loading...</div>;
     }
-    
-    const {companyInfo} = this.state
-    const info = companyInfo[0]
-    console.log(info["company_name"])
+
+    const { companyInfo } = this.state;
+    const info = companyInfo[0];
+    console.log(info["company_name"]);
     return (
       <div className="container">
         <Router history={history}>
@@ -98,4 +101,3 @@ class App extends React.Component {
 }
 
 export default App;
-
