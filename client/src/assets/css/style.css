@@ -327,24 +327,8 @@ h6 {
 #hero {
   width: 100%;
   height: 840px;
-
   background-size: cover;
   position: relative;
-}
-
-#hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .container {
-  position: relative;
-  padding-top: 132px;
 }
 
 @media (max-width: 992px) {
@@ -353,21 +337,13 @@ h6 {
   }
 }
 
-#hero h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #222222;
-  font-family: "Poppins", sans-serif;
-}
+
 
 #hero h1 span {
   color: black;
 }
 
 #hero h2 {
-  color: #555555;
   margin: 5px 0 30px 0;
   font-size: 24px;
   font-weight: 400;
@@ -383,12 +359,13 @@ h6 {
   padding: 10px 28px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
-  background: black;
+  color: black;
+  background: white;
 }
 
 #hero .btn-get-started:hover {
-  background: #247cf0;
+  color: white;
+  background: black;
 }
 
 #hero .btn-watch-video {
@@ -454,6 +431,11 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-pos {
   padding: 60px 0;
   overflow: hidden;
 }
@@ -1137,7 +1119,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #fff;
+  background-color: #fff;
   padding: 0 0 30px 0;
   color: #444444;
   font-size: 14px;
@@ -1263,7 +1245,6 @@ section {
 
 /* news */
 
-/* move special fonts to HTML head for better performance */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700");
 
 /* custom template */
@@ -1529,7 +1510,8 @@ small.text-muted {
 }
 
 .container {
-  max-width: 2000px;
+  min-width: 100%;
+  height: 100%;
 }
 
 .carousel {

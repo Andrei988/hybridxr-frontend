@@ -45,9 +45,7 @@ class App extends React.Component {
     const { isLoading } = this.state;
     if (isLoading) {
       return (
-        <div className="">
           <Skeleton width={2500}  height="100vh" translucent/>
-        </div>
       );
     }
 
@@ -57,7 +55,6 @@ class App extends React.Component {
     return (
       <div className="container">
         <Router history={history}>
-          <div></div>
           <Navigation
             companyName={info["company_name"]}
             email={info["contact_email"]}
