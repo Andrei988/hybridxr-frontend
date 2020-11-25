@@ -1,6 +1,7 @@
 import React from "react";
 import Icofont from "react-icofont";
 import { Link } from "react-router-dom";
+import favicon from "../../assets/img/favicon.png"
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -49,10 +50,9 @@ class Navigation extends React.Component {
         </div>
         <div id="header" className="fixed-top">
           <div className="container d-flex align-items-center">
-            <h1 className="logo mr-auto">
+            <h1 className="mr-auto"> 
               <Link to="/">
-                {this.props.companyName}
-                <span>.</span>
+                <img id="favicon" src={favicon}></img>
               </Link>
             </h1>
             <nav className="nav-menu d-none d-lg-block">

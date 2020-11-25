@@ -31,6 +31,18 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+#favicon {
+  width: 120px;
+  height: 60px;
+}
+
+#favicon-tr {
+  width: 300px;
+  height: 200px;
+  padding-bottom: 39px;
+  padding-left: 2px;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
