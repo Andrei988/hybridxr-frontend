@@ -1,5 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
+import api from "../apis/api";
+import { runMobileNav } from "../jQuery/mobileNav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css/style.css";
 import history from "../history";
@@ -12,8 +14,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NewsPage from "./pages/NewsPage";
 import PostDetailed from "./items/PostDetailed";
-import { runMobileNav } from "../jQuery/mobileNav";
-import api from "../apis/api";
+import Skeleton from "@yisheng90/react-loading";
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +44,11 @@ class App extends React.Component {
   render() {
     const { isLoading } = this.state;
     if (isLoading) {
-      return <div>Loading...</div>;
+      return (
+        <div className="">
+          <Skeleton width={2500}  height="100vh" translucent/>
+        </div>
+      );
     }
 
     const { companyInfo } = this.state;
@@ -52,48 +57,47 @@ class App extends React.Component {
     return (
       <div className="container">
         <Router history={history}>
-          <div>
-            <Navigation
-              companyName={info["company_name"]}
-              email={info["contact_email"]}
-              contactNumber={info["contact_number"]}
+          <div></div>
+          <Navigation
+            companyName={info["company_name"]}
+            email={info["contact_email"]}
+            contactNumber={info["contact_number"]}
+          />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              component={() => (
+                <Home
+                  companyName={info["company_name"]}
+                  description={info["company_description"]}
+                />
+              )}
             />
-            <Switch>
-              <Route
-                path="/"
-                exact
-                component={() => (
-                  <Home
-                    companyName={info["company_name"]}
-                    description={info["company_description"]}
-                  />
-                )}
-              />
-              <Route path="/news" exact component={NewsPage} />
-              <Route path="/services" exact component={ServicesPage} />
-              <Route path="/portfolio" exact component={PortfolioPage} />
-              <Route path="/about" exact component={AboutPage} />
-              <Route path="/post/:id" exact component={PostDetailed} />
-              <Route
-                path="/contact"
-                exact
-                component={() => (
-                  <ContactPage
-                    title={info["contact_title"]}
-                    address={info["contact_address"]}
-                    email={info["contact_email"]}
-                    number={info["contact_number"]}
-                  />
-                )}
-              />
-            </Switch>
-            <Footer
-              number={info["contact_number"]}
-              email={info["contact_email"]}
-              address={info.contact_address_array}
-              sn_title={info["footer_title"]}
+            <Route path="/news" exact component={NewsPage} />
+            <Route path="/services" exact component={ServicesPage} />
+            <Route path="/portfolio" exact component={PortfolioPage} />
+            <Route path="/about" exact component={AboutPage} />
+            <Route path="/post/:id" exact component={PostDetailed} />
+            <Route
+              path="/contact"
+              exact
+              component={() => (
+                <ContactPage
+                  title={info["contact_title"]}
+                  address={info["contact_address"]}
+                  email={info["contact_email"]}
+                  number={info["contact_number"]}
+                />
+              )}
             />
-          </div>
+          </Switch>
+          <Footer
+            number={info["contact_number"]}
+            email={info["contact_email"]}
+            address={info.contact_address_array}
+            sn_title={info["footer_title"]}
+          />
         </Router>
       </div>
     );
