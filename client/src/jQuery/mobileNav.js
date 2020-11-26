@@ -1,8 +1,6 @@
 import $ from "jquery";
 
 export const runMobileNav = () => {
- 
-  console.log($(".nav-menu").length);
   if ($(".nav-menu").length) {
     var $mobile_nav = $(".nav-menu").clone().prop({
       class: "mobile-nav d-lg-none",

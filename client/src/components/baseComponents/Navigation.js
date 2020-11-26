@@ -1,7 +1,7 @@
 import React from "react";
 import Icofont from "react-icofont";
 import { Link } from "react-router-dom";
-import favicon from "../../assets/img/favicon.png"
+import favicon from "../../assets/img/favicon.png";
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -15,6 +15,10 @@ class Navigation extends React.Component {
       contact: "",
     };
   }
+
+  redirectToSocialLinks = (url) => {
+    //window.location.assign(url);
+  };
 
   render() {
     return (
@@ -30,49 +34,130 @@ class Navigation extends React.Component {
               <i className="icofont-phone" /> {this.props.contactNumber}
             </div>
             <div className="social-links">
-              <Link to="/" className="twitter">
-                <Icofont icon="twitter" />
-              </Link>
-              <Link to="/" className="facebook">
+              <a href="https://www.twitter.com">
+                <Icofont icon="twitter" className="facebook" />
+              </a>
+              <a
+                href="https://www.facebook.com/Hybrid-XR-103887474899498/"
+                className="facebook"
+              >
                 <Icofont icon="facebook" />
-              </Link>
-              <Link to="/" className="instagram">
+              </a>
+              <a
+                href="https://www.instagram.com/hybrid.xr/"
+                className="instagram"
+              >
                 <Icofont icon="instagram" />
-              </Link>
-              <Link to="/" className="skype">
+              </a>
+              <a href="https://www.skype.com" className="skype">
                 <Icofont icon="skype" />
-              </Link>
-              <Link to="/" className="linkedin">
+              </a>
+              <a
+                href="https://www.linkedin.com/company/hybrid-xr"
+                className="linkedin"
+              >
                 <Icofont icon="linkedin" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
         <div id="header" className="fixed-top">
           <div className="container d-flex align-items-center">
-            <h1 className="mr-auto"> 
+            <h1 className="mr-auto">
               <Link to="/">
-                <img id="favicon" src={favicon}></img>
+                <img id="favicon" src={favicon} alt={favicon}></img>
               </Link>
             </h1>
             <nav className="nav-menu d-none d-lg-block">
               <ul>
-                <li onClick={() => this.setState({news:"active", home:"", services:"", portfolio:"", about:"", contact:""})} className={this.state.news}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "active",
+                      home: "",
+                      services: "",
+                      portfolio: "",
+                      about: "",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.news}
+                >
                   <Link to="/news">News</Link>
                 </li>
-                <li onClick={() => this.setState({news:"", home:"active", services:"", portfolio:"", about:"", contact:""})} className={this.state.home}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "active",
+                      services: "",
+                      portfolio: "",
+                      about: "",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.home}
+                >
                   <Link to="/">Home</Link>
                 </li>
-                <li onClick={() => this.setState({news:"", home:"", services:"active", portfolio:"", about:"", contact:""})} className={this.state.services}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "",
+                      services: "active",
+                      portfolio: "",
+                      about: "",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.services}
+                >
                   <Link to="/services">Services</Link>
                 </li>
-                <li onClick={() => this.setState({news:"", home:"", services:"", portfolio:"active", about:"", contact:""})} className={this.state.portfolio}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "",
+                      services: "",
+                      portfolio: "active",
+                      about: "",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.portfolio}
+                >
                   <Link to="/portfolio">Portfolio</Link>
                 </li>
-                <li onClick={() => this.setState({news:"", home:"", services:"", portfolio:"", about:"active", contact:""})} className={this.state.about}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "",
+                      services: "",
+                      portfolio: "",
+                      about: "active",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.about}
+                >
                   <Link to="/about">About</Link>
                 </li>
-                <li onClick={() => this.setState({news:"", home:"", services:"", portfolio:"", about:"", contact:"active"})} className={this.state.contact}>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "",
+                      services: "",
+                      portfolio: "",
+                      about: "",
+                      contact: "active",
+                    })
+                  }
+                  className={this.state.contact}
+                >
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>

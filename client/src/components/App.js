@@ -51,7 +51,6 @@ class App extends React.Component {
 
     const { companyInfo } = this.state;
     const info = companyInfo[0];
-    console.log(info["company_name"]);
     return (
       <div className="container">
         <Router history={history}>
@@ -92,7 +91,7 @@ class App extends React.Component {
           <Footer
             number={info["contact_number"]}
             email={info["contact_email"]}
-            address={info.contact_address_array}
+            address={['Kollegievaenget 3', 'Horsens 8700', 'Denmark']}
             sn_title={info["footer_title"]}
           />
         </Router>

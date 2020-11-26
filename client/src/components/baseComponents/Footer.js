@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Icofont from "react-icofont";
 
-const Footer = ({email, number, address, sn_title}) => {
+const Footer = ({ email, number, address, sn_title }) => {
   return (
     <footer id="footer">
       <div className="footer-top">
@@ -13,14 +13,17 @@ const Footer = ({email, number, address, sn_title}) => {
                 Hybrid XR<span>.</span>
               </h3>
               <p>
-                {/* {address[0]} <br />
-                {address[1]} 
-                <br />
-                {address[2]}  <br /> */}
                 <br />
                 <strong>Phone:</strong> {number}
                 <br />
                 <strong>Email:</strong> {email}
+                <br />
+                <br />
+                {address[0]} 
+                <br />
+                {address[1]}
+                <br />
+                {address[2]}
                 <br />
               </p>
             </div>
@@ -76,25 +79,32 @@ const Footer = ({email, number, address, sn_title}) => {
             </div>
             <div className="col-lg-3 col-md-6 footer-links">
               <h4>Our Social Networks</h4>
-              <p>
-                {sn_title}
-              </p>
+              <p>{sn_title}</p>
               <div className="social-links mt-3">
-                <Link to="/" className="twitter">
-                  <Icofont icon="twitter" />
-                </Link>
-                <Link to="/" className="facebook">
-                  <Icofont icon="facebook" />
-                </Link>
-                <Link to="/" className="instagram">
-                  <Icofont icon="instagram" />
-                </Link>
-                <Link to="/" className="skype">
-                  <Icofont icon="skype" />
-                </Link>
-                <Link to="/" className="linkedin">
-                  <Icofont icon="linkedin" />
-                </Link>
+              <a href="https://www.twitter.com">
+                <Icofont icon="twitter" className="facebook" />
+              </a>
+              <a
+                href="https://www.facebook.com/Hybrid-XR-103887474899498/"
+                className="facebook"
+              >
+                <Icofont icon="facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/hybrid.xr/"
+                className="instagram"
+              >
+                <Icofont icon="instagram" />
+              </a>
+              <a href="https://www.skype.com" className="skype">
+                <Icofont icon="skype" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/hybrid-xr"
+                className="linkedin"
+              >
+                <Icofont icon="linkedin" />
+              </a>
               </div>
             </div>
           </div>
