@@ -21,12 +21,8 @@ class PostDetailed extends React.Component {
   }
 
   savePostLocally = (post, id) => {
-    try {
       localStorage.setItem("post", JSON.stringify(post));
       localStorage.setItem("id", id);
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   renderPost(post) {
@@ -62,8 +58,7 @@ class PostDetailed extends React.Component {
               <p className="lead">{post.description}</p>
             </div>
           </div>
-        </div>{" "}
-        {/* /container */}
+        </div>
       </div>
     );
   }

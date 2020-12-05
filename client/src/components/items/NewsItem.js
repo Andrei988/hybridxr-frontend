@@ -21,9 +21,7 @@ const NewsItem = ({ title, timestamp, image, id }) => {
             />
           </div>
           <div className="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-            {/*title*/}
             <h2 className="h3 post-title text-white my-1">{title}</h2>
-            {/* meta title */}
             <div className="news-meta">
               <span className="news-date">{convert(timestamp)}</span>
             </div>

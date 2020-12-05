@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getPosts } from "../../actions";
 import { connect } from "react-redux";
-import NewsItem from "../../components/items/NewsItem";
+import NewsItem from "../items/NewsItem";
 import NewsBox from "../items/NewsBox";
 
 class NewsPage extends React.Component {
