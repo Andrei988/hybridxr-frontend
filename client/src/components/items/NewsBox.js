@@ -5,6 +5,7 @@ import convert from "../../utils/DatetimeConverter";
 import formatTitle from "../../utils/FormatTitle";
 
 const NewsBox = ({ title, image, id, timestamp }) => {
+  var image_formatted = image.replace('images/','');
   return (
     <div
       className="col-12 col-md-6  col-sm-6 col-lg-6  mb-3 "
@@ -14,7 +15,7 @@ const NewsBox = ({ title, image, id, timestamp }) => {
         <div className="position-relative">
           <div className="ratio_right-cover-2 image-wrapper">
             <img
-              src={`${prod_url_images}${image}`}
+              src={`${prod_url_images}${image_formatted}`}
               className="d-block w-100"
               alt="news box"
               id="related-image"

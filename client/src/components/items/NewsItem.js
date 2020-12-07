@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import convert from "../../utils/DatetimeConverter";
 
 const NewsItem = ({ title, timestamp, image, id }) => {
+  var image_formatted = image.replace('images/','');
+  console.log(image_formatted)
+  console.log(`${prod_url_clean}${image_formatted}`)
   return (
     <div
       key={title}
@@ -14,7 +17,7 @@ const NewsItem = ({ title, timestamp, image, id }) => {
         <Link to={`/post/${id}`} className="text-muted">
           <div className="ratio_left-cover-1 image-wrapper">
             <img
-              src={`${prod_url_clean}${image}`}
+              src={`${prod_url_clean}${image_formatted}`}
               className="d-block w-100 "
               alt="carousel"
               id="carousel-item-img"

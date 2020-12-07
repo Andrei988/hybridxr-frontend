@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { getPost } from "../../actions";
 import { prod_url_clean } from "../../apis/api";
+import { prod_url_images } from "../../apis/api";
 import convert from "../../utils/DatetimeConverter";
 
 class PostDetailed extends React.Component {
@@ -29,13 +30,15 @@ class PostDetailed extends React.Component {
     var img = "";
     if (post.image) {
       img = post.image.substring(1);
+      img = img.replace('images/','');
     }
+
 
     return (
       <div id="post-detailed">
         <section
           className="banner-section"
-          style={{ backgroundImage: `url(${prod_url_clean}${img})` }}
+          style={{ backgroundImage: `url(${prod_url_images}${img})` }}
         >
           <div
             className="col-lg-12 col-md-12 col-sm-12 post-title-block"
