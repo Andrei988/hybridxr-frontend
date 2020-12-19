@@ -1589,3 +1589,6 @@ small.text-muted {
   }
 }
 
+#video-video {
+  position: absolute;
+}
