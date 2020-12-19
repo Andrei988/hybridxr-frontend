@@ -18,7 +18,7 @@ const AboutPage = () => {
         </div>
         <div className="row">
           <div className="col-lg-6" data-aos="zoom-out" data-aos-delay={100}>
-            <img src={image} className="img-fluid" alt />
+            <img src={image} className="img-fluid" alt="about" />
           </div>
           <div
             className="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"

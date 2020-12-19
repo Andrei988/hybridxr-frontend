@@ -115,7 +115,7 @@ class Navigation extends React.Component {
                 >
                   <Link to="/services">Services</Link>
                 </li>
-                <li
+                {/* <li
                   onClick={() =>
                     this.setState({
                       news: "",
@@ -129,7 +129,7 @@ class Navigation extends React.Component {
                   className={this.state.portfolio}
                 >
                   <Link to="/portfolio">Portfolio</Link>
-                </li>
+                </li> */}
                 <li
                   onClick={() =>
                     this.setState({

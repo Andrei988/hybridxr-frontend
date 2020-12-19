@@ -8,8 +8,7 @@
 .Video {
   z-index: -1;
   min-width: 2500px;
-  position: fixed;
-  right: 0;
+  width: 100%;
 }
 
 .Content {

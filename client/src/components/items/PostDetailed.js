@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getPost } from "../../actions";
-import { prod_url_clean } from "../../apis/api";
 import { prod_url_images } from "../../apis/api";
 import convert from "../../utils/DatetimeConverter";
 

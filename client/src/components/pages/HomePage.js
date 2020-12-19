@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classes from "../../assets/css/BackgroundVideo.module.css";
 import favicon from "../../assets/img/favicon-tr.png"
+import video from "../../assets/videos/video.mp4"
 
 const HomePage = (props) => {
-  const videoSource = "";
   return (
     <div className={classes.Container}>
-      <video controls="controls" autoPlay="autoplay" loop="loop" muted className={classes.Video}>
-        <source src={videoSource} type="video/mp4"/>
+      <video id="video-video" controls="controls" autoPlay="autoplay" loop="loop"  muted className={classes.Video}>
+        <source src={video} type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div id="hero" className={classes.Content}>
