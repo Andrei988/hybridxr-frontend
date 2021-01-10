@@ -18,7 +18,7 @@ class ContactPage extends React.Component {
       <div>
         <section id="contact" className="contact">
           <div className="container" data-aos="fade-up">
-            <div className="section-title">
+            <div className="section-title contact-title">
               <h2>Contact</h2>
               <h3>
                 <span>Contact Us</span>

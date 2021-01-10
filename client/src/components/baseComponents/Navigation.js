@@ -27,16 +27,13 @@ class Navigation extends React.Component {
           id="topbar"
           className="d-none d-lg-flex align-items-center fixed-top"
         >
-          <div className="container d-flex">
+          <div id="sub-topbar" className="container d-flex">
             <div className="contact-info mr-auto">
               <i className="icofont-envelope" />
-              <Link to="mailto:contact@example.com">{this.props.email}</Link>
+              <Link to="/contact">{this.props.email}</Link>
               <i className="icofont-phone" /> {this.props.contactNumber}
             </div>
             <div className="social-links">
-              <a href="https://www.twitter.com">
-                <Icofont icon="twitter" className="facebook" />
-              </a>
               <a
                 href="https://www.facebook.com/Hybrid-XR-103887474899498/"
                 className="facebook"
@@ -48,9 +45,6 @@ class Navigation extends React.Component {
                 className="instagram"
               >
                 <Icofont icon="instagram" />
-              </a>
-              <a href="https://www.skype.com" className="skype">
-                <Icofont icon="skype" />
               </a>
               <a
                 href="https://www.linkedin.com/company/hybrid-xr"
@@ -105,6 +99,21 @@ class Navigation extends React.Component {
                     this.setState({
                       news: "",
                       home: "",
+                      services: "",
+                      portfolio: "",
+                      about: "active",
+                      contact: "",
+                    })
+                  }
+                  className={this.state.about}
+                >
+                  <Link to="/about">About</Link>
+                </li>
+                <li
+                  onClick={() =>
+                    this.setState({
+                      news: "",
+                      home: "",
                       services: "active",
                       portfolio: "",
                       about: "",
@@ -130,21 +139,7 @@ class Navigation extends React.Component {
                 >
                   <Link to="/portfolio">Portfolio</Link>
                 </li> */}
-                <li
-                  onClick={() =>
-                    this.setState({
-                      news: "",
-                      home: "",
-                      services: "",
-                      portfolio: "",
-                      about: "active",
-                      contact: "",
-                    })
-                  }
-                  className={this.state.about}
-                >
-                  <Link to="/about">About</Link>
-                </li>
+                
                 <li
                   onClick={() =>
                     this.setState({

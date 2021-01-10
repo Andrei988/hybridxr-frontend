@@ -17,7 +17,7 @@ const HomePage = (props) => {
             Welcome to <img id="favicon-tr" src={favicon} alt={favicon}></img>
           </h1>
           <h2>{props.description}</h2>
-          <Link to="/services" className="btn-get-started">
+          <Link to="/about" className="btn-get-started">
             Get Started
           </Link>
         </div>

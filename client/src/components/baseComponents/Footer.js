@@ -19,8 +19,6 @@ const Footer = ({ email, number, address, sn_title }) => {
                 <strong>Email:</strong> {email}
                 <br />
                 <br />
-                {address[0]} 
-                <br />
                 {address[1]}
                 <br />
                 {address[2]}
@@ -40,15 +38,15 @@ const Footer = ({ email, number, address, sn_title }) => {
                 </li>
                 <li>
                   <i className="bx bx-chevron-right" />
-                  <Link to="/about">About us</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right" />
                   <Link to="/services">Services</Link>
                 </li>
                 <li>
                   <i className="bx bx-chevron-right" />
-                  <Link to="/portfolio">Portfolio</Link>
+                  <Link to="/about">About us</Link>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right" />
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -57,23 +55,15 @@ const Footer = ({ email, number, address, sn_title }) => {
               <ul>
                 <li>
                   <i className="bx bx-chevron-right" />
-                  <Link to="/">Web Design</Link>
+                  <Link to="/services">XR Applications</Link>
                 </li>
                 <li>
                   <i className="bx bx-chevron-right" />
-                  <Link to="/">Web Development</Link>
+                  <Link to="/services">3D Modelling / Animation </Link>
                 </li>
                 <li>
                   <i className="bx bx-chevron-right" />
-                  <Link to="/">Product Management</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right" />
-                  <Link to="/">Marketing</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right" />
-                  <Link to="/">Graphic Design</Link>
+                  <Link to="/services">2D Animation</Link>
                 </li>
               </ul>
             </div>
@@ -81,9 +71,6 @@ const Footer = ({ email, number, address, sn_title }) => {
               <h4>Our Social Networks</h4>
               <p>{sn_title}</p>
               <div className="social-links mt-3">
-              <a href="https://www.twitter.com">
-                <Icofont icon="twitter" className="facebook" />
-              </a>
               <a
                 href="https://www.facebook.com/Hybrid-XR-103887474899498/"
                 className="facebook"
@@ -95,9 +82,6 @@ const Footer = ({ email, number, address, sn_title }) => {
                 className="instagram"
               >
                 <Icofont icon="instagram" />
-              </a>
-              <a href="https://www.skype.com" className="skype">
-                <Icofont icon="skype" />
               </a>
               <a
                 href="https://www.linkedin.com/company/hybrid-xr"

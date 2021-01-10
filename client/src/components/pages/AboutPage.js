@@ -1,12 +1,13 @@
 import React from "react";
 import Icofont from "react-icofont";
-import image from "../../assets/img/testimonials-bg.jpg"
+import image from "../../assets/img/testimonials-bg.jpg";
+import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   return (
     <section id="about" className="about section-bg">
       <div className="container" data-aos="fade-up">
-        <div className="section-title">
+        <div className="section-title about-title">
           <h2>About</h2>
           <h3>
             Find Out More <span>About Us</span>
@@ -65,6 +66,10 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+
+      <Link to="/services" className="btn-get-started">
+        Get Started
+      </Link>
     </section>
   );
 };

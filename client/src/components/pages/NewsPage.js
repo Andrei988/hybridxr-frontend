@@ -76,22 +76,33 @@ class NewsPage extends React.Component {
   render() {
     const { index } = this.state;
     return (
-      <section className="row d-flex justify-content-center" id="news-carousel">
-        <div className="col col-md-12 col-lg-6 col-sm-12 mt-4">
-          <Carousel
-            autoPlay={true}
-            interval={10000}
-            activeindex={index}
-            onSelect={this.handleSelect}
-            className="carousel slide carousel"
-          >
-            {this.renderCarouselItems()}
-          </Carousel>
+      <div>
+        <div className="section-title news-title">
+          <h2>News</h2>
+          <h3>
+            Hybrid Reality <span>News</span>
+          </h3>
         </div>
-        <div className="col col-md-12 col-lg-6 col-xs-12">
-          <div className="row">{this.renderNewsBox()}</div>
-        </div>
-      </section>
+        <section
+          className="row d-flex justify-content-center"
+          id="news-carousel"
+        >
+          <div className="col col-md-12 col-lg-6 col-sm-12 cr">
+            <Carousel
+              autoPlay={true}
+              interval={10000}
+              activeindex={index}
+              onSelect={this.handleSelect}
+              className="carousel slide carousel"
+            >
+              {this.renderCarouselItems()}
+            </Carousel>
+          </div>
+          <div className="col col-md-12 col-lg-6 col-xs-12">
+            <div className="row">{this.renderNewsBox()}</div>
+          </div>
+        </section>
+      </div>
     );
   }
 }
