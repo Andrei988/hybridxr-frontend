@@ -200,7 +200,6 @@ h6 {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: black;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -1614,4 +1613,29 @@ small.text-muted {
 
 #video-video {
   position: absolute;
+}
+
+.youtube-video {
+  height: 450px;
+  width: 900px;
+}
+
+#nav-button .btn-get-started {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: white;
+  background: black;
+  
+}
+
+#nav-button .btn-get-started:hover {
+  color: black;
+  background: white;
 }

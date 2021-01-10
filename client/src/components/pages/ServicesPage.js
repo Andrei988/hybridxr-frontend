@@ -48,10 +48,14 @@ const ServicesPage = (props) => {
             </div>
           </div>
         </div>
+        <div id="nav-button" className="row pt-2 pb-2">
+        <div className="col text-center">
+          <Link to="/contact" className="btn-get-started align-self-center pt-2">
+            Contact
+          </Link>
+        </div>
+      </div>
       </section>
-      <Link to="/contact" className="btn-get-started">
-        Get Started
-      </Link>
     </div>
   );
 };

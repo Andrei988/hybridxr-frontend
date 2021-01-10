@@ -3,8 +3,7 @@ import Icofont from "react-icofont";
 import { connect } from "react-redux";
 import { sendEmail } from "../../actions";
 import ContactForm from "../items/ContactForm";
-
-const placeId = "ChIJMa3_kL5jTEYRlf0kk7_eytA";
+const placeId = "ChIJrWoV7FdgTEYRxvncjZpjPfU";
 const api_key = "AIzaSyClXtp3KWB6bqovTjxkUqKgZD2Ptvd2iTw";
 
 class ContactPage extends React.Component {

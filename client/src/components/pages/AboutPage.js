@@ -1,7 +1,7 @@
 import React from "react";
 import Icofont from "react-icofont";
-import image from "../../assets/img/testimonials-bg.jpg";
 import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const AboutPage = () => {
   return (
@@ -19,7 +19,7 @@ const AboutPage = () => {
         </div>
         <div className="row">
           <div className="col-lg-6" data-aos="zoom-out" data-aos-delay={100}>
-            <img src={image} className="img-fluid" alt="about" />
+            <YouTube videoId="60yP8f5E-B4" className="youtube-video" />
           </div>
           <div
             className="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
@@ -36,7 +36,7 @@ const AboutPage = () => {
             </p>
             <ul>
               <li>
-                <Icofont icon="map" />
+                <Icofont icon="icofont-automation" />
                 <div>
                   <h5>Ullamco laboris nisi ut aliquip consequat</h5>
                   <p>
@@ -46,7 +46,7 @@ const AboutPage = () => {
                 </div>
               </li>
               <li>
-                <i className="bx bx-images" />
+              <Icofont icon="map" />
                 <div>
                   <h5>Magnam soluta odio exercitationem reprehenderi</h5>
                   <p>
@@ -66,10 +66,13 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
-      <Link to="/services" className="btn-get-started">
-        Get Started
-      </Link>
+      <div id="nav-button" className="row pt-2 pb-2">
+        <div className="col text-center">
+          <Link to="/services" className="btn-get-started align-self-center pt-2">
+            Services
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };
