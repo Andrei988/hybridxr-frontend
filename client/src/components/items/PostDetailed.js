@@ -54,10 +54,10 @@ class PostDetailed extends React.Component {
         <div className="container">
           <div className="row">
             <div
-              className="col-lg-9 col-md-9 col-sm-12"
+              className="col text-center "
               id="post-detailed-description"
             >
-              <p className="lead">{post.description}</p>
+              <p className="lead  align-self-center">{post.description}</p>
             </div>
           </div>
         </div>
