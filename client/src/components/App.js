@@ -9,7 +9,6 @@ import Navigation from "./baseComponents/Navigation";
 import Footer from "./baseComponents/Footer";
 import Home from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
-import PortfolioPage from "./pages/PortfolioPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NewsPage from "./pages/NewsPage";
@@ -72,7 +71,6 @@ class App extends React.Component {
             />
             <Route path="/news" exact component={NewsPage} />
             <Route path="/services" exact component={ServicesPage} />
-            <Route path="/portfolio" exact component={PortfolioPage} />
             <Route path="/about" exact component={AboutPage} />
             <Route path="/post/:id" exact component={PostDetailed} />
             <Route
