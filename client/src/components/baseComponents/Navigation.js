@@ -16,10 +16,6 @@ class Navigation extends React.Component {
     };
   }
 
-  redirectToSocialLinks = (url) => {
-    //window.location.assign(url);
-  };
-
   render() {
     return (
       <header>
@@ -124,22 +120,6 @@ class Navigation extends React.Component {
                 >
                   <Link to="/services">Services</Link>
                 </li>
-                {/* <li
-                  onClick={() =>
-                    this.setState({
-                      news: "",
-                      home: "",
-                      services: "",
-                      portfolio: "active",
-                      about: "",
-                      contact: "",
-                    })
-                  }
-                  className={this.state.portfolio}
-                >
-                  <Link to="/portfolio">Portfolio</Link>
-                </li> */}
-                
                 <li
                   onClick={() =>
                     this.setState({
