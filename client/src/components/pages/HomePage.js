@@ -7,10 +7,11 @@ import video from "../../assets/videos/video.mp4"
 const HomePage = (props) => {
   return (
     <div className={classes.Container}>
-      <video id="video-video" controls="controls" autoPlay="autoplay" loop="loop"  muted className={classes.Video}>
+      {/* <video id="video-video" controls="controls" autoPlay="autoplay" loop="loop"  muted className={classes.Video}>
         <source src={video} type="video/webm" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
+
       <div id="hero" className={classes.Content}>
         <div className={classes.SubContent}>
           <h1>

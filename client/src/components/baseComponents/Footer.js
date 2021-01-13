@@ -89,6 +89,12 @@ const Footer = ({ email, number, address, sn_title }) => {
               >
                 <Icofont icon="linkedin" />
               </a>
+              <a
+                href="https://www.youtube.com/channel/UCT-_Q2oM8r7lKt34kb6ZWbQ"
+                className="youtube"
+              >
+                <Icofont icon="youtube" />
+              </a>
               </div>
             </div>
           </div>

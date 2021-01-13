@@ -94,8 +94,6 @@ h6 {
   margin-left: 15px;
 }
 
-
-
 #topbar .contact-info i:first-child {
   margin-left: 0;
 }
@@ -122,7 +120,7 @@ h6 {
   padding: 25px 0;
   top: 40px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  height:75px;
+  height: 75px;
 }
 
 #header.header-scrolled {
@@ -342,20 +340,115 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.youtube-video {
+  margin-left: 60px;
+  height: 450px;
+  width: 900px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #hero {
+    background-image: url("../img/homePageMobilee.jpg");
+    top: -60px;
+  }
+  .youtube-video {
+    margin-left: 0px;
+    height: 300px;
+    width: 100%;
+  }
+}
+/* Small devices (phones, 600px and up till 1200) */
+@media only screen and (min-width: 600px) {
+  #hero {
+    background-image: url("../img/homePageMobilee.jpg");
+    top: -60px;
+  }
+  .youtube-video {
+    margin-left: 0px;
+    height: 450px;
+    width: 100%;
+  }
+}
+/* Medium devices (Tablets, 1200px and up till 2000) */
+@media only screen and (min-width: 1200px) {
+  #hero {
+    background-image: url("../img/homePageMobilee.jpg");
+    top: -60px;
+  }
+  .youtube-video {
+    margin-left: 20px;
+    height: 400px;
+    width: 500px;
+    width: 100%;
+  }
+}
+/* Big devices (Computers, minim 2000) */
+@media only screen and (min-width: 2000px) {
+  #hero {
+    background-image: url("../img/homePageMobilee.jpg");
+    top: -60px;
+  }
+  .youtube-video {
+    margin-left: 60px;
+    height: 450px;
+    width: 900px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #hero {
+    background-image: url("../img/homePageMobilee.jpg");
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #hero {
+    
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #hero {
+    background-image: url("../img/homePageTablet.jpg");
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #hero {
+    background-image: url("../img/homePage.jpg");
+  }
+}
+
 #hero {
+  margin-left: 0px;
   width: 100%;
   height: 840px;
   background-size: cover;
   position: relative;
 }
+/* @media only screen and (min-width: 900) {
+  #hero {
+    background-image: url("../img/homePage_tablet.jpg");
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  #hero {
+    background-image: url("../img/homePage_mobile.jpg");
+  }
+} */
 
 @media (max-width: 992px) {
   #hero .container {
     padding-top: 58px;
   }
 }
-
-
 
 #hero h1 span {
   color: black;
@@ -464,7 +557,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
-  margin-top:15px;
+  margin-top: 15px;
 }
 
 .section-title h2 {
@@ -640,7 +733,6 @@ section {
 
 .about {
   margin-top: 50px;
-
 }
 
 .about .content h3 {
@@ -769,6 +861,10 @@ section {
   font-size: 24px;
 }
 
+.icon-box {
+  height: 361px;
+}
+
 .services .icon-box h4 a {
   color: #222222;
   transition: ease-in-out 0.3s;
@@ -783,7 +879,7 @@ section {
 .services .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 grey;
-} 
+}
 
 .services .icon-box:hover h4 a,
 .services .icon-box:hover .icon i {
@@ -1498,7 +1594,6 @@ small.text-muted {
   margin-top: 22px;
 }
 
-
 .b-0 {
   bottom: 0;
 }
@@ -1596,9 +1691,6 @@ small.text-muted {
   }
 }
 
-
-
-
 @media screen and (max-width: 450px) {
   #carousel-item-img {
     height: 200px;
@@ -1615,10 +1707,7 @@ small.text-muted {
   position: absolute;
 }
 
-.youtube-video {
-  height: 450px;
-  width: 900px;
-}
+
 
 #nav-button .btn-get-started {
   font-family: "Roboto", sans-serif;
@@ -1632,7 +1721,6 @@ small.text-muted {
   transition: 0.5s;
   color: white;
   background: black;
-  
 }
 
 #nav-button .btn-get-started:hover {
